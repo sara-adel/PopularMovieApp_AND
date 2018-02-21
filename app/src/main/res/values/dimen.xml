@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--fragment movie-->
+    <dimen name="grid_item_movie_width">150dp</dimen>
+    <dimen name="grid_vertical_spacing">0dp</dimen>
+
+    <!--movie poster-->
+    <dimen name="grid_item_image_height">200dp</dimen>
+
+    <!--detail fragment-->
+    <dimen name="padding_linear">16dp</dimen>
+    <dimen name="title_margin_bottom">10dp</dimen>
+    <dimen name="image_width">150dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+    <dimen name="text_margin_left">5dp</dimen>
+    <dimen name="text_margin_top">15dp</dimen>
+
+
+</resources>
