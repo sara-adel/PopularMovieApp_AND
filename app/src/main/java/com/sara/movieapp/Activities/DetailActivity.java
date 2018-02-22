@@ -15,14 +15,14 @@ public class DetailActivity extends AppCompatActivity {
 
         setTitle("MovieDetail");
         Bundle bundle = new Bundle();
-        bundle.putSerializable(DetailFragment.DETAIL_URI , getIntent().getSerializableExtra(DetailFragment.DETAIL_URI));
+        bundle.putSerializable(DetailFragment.DETAIL_URI, getIntent().getSerializableExtra(DetailFragment.DETAIL_URI));
 
         DetailFragment detail = new DetailFragment();
         detail.setArguments(bundle);
 
-        if (savedInstanceState == null){
+        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.detail , detail)
+                    .add(R.id.detail, detail)
                     .commit();
         }
     }

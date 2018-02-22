@@ -26,7 +26,7 @@ public class DetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Bundle arguments = getArguments();
-        if (arguments != null){
+        if (arguments != null) {
             movieData = (Movie) arguments.getSerializable(DetailFragment.DETAIL_URI);
         }
 
@@ -42,7 +42,7 @@ public class DetailFragment extends Fragment {
         title.setText(movieData.getTitle());
         Picasso.with(getContext()).load("https://image.tmdb.org/t/p/w185/" + movieData.getImage())
                 .into(imagePoster);
-        rate.setText(movieData.getRate() +" /10");
+        rate.setText(movieData.getRate() + " /10");
         date.setText(movieData.getDate());
         overview.setText(movieData.getOverview());
 

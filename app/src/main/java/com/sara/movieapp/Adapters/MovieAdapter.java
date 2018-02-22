@@ -16,11 +16,11 @@ import com.squareup.picasso.Picasso;
  * Created by sara on 2/17/2018.
  */
 
-public class MovieAdapter extends ArrayAdapter<Movie>{
+public class MovieAdapter extends ArrayAdapter<Movie> {
 
     private ImageView moviePoster;
 
-    public MovieAdapter( Context context) {
+    public MovieAdapter(Context context) {
         super(context, 0);
     }
 

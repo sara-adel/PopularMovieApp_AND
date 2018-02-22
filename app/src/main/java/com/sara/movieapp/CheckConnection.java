@@ -9,11 +9,11 @@ import android.widget.Toast;
  * Created by sara on 2/20/2018.
  */
 
-public class checkConnection {
+public class CheckConnection {
 
     Context context;
 
-    public checkConnection(Context context) {
+    public CheckConnection(Context context) {
         this.context = context;
     }
 

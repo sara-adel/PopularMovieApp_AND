@@ -3,6 +3,7 @@ package com.sara.movieapp.Fragments;
 import android.widget.GridView;
 
 import com.sara.movieapp.Adapters.MovieAdapter;
+
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import android.widget.Toast;
 
 import com.sara.movieapp.Models.Movie;
 import com.sara.movieapp.R;
-import com.sara.movieapp.checkConnection;
+import com.sara.movieapp.CheckConnection;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -37,7 +38,7 @@ public class MovieFragment extends Fragment {
 
     private GridView movieList;
     private MovieAdapter movieAdapter;
-    checkConnection checkConnection;
+    CheckConnection checkConnection;
 
     public interface BunldeCallback {
         void onItemSelected(Movie movie);
@@ -86,7 +87,7 @@ public class MovieFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_movie, container, false);
 
-        checkConnection = new checkConnection(getActivity());
+        checkConnection = new CheckConnection(getActivity());
         movieAdapter = new MovieAdapter(getContext());
 
         movieList = view.findViewById(R.id.movie_grid);
@@ -152,11 +153,15 @@ public class MovieFragment extends Fragment {
                         }
                     }
                 }
-            }else {
-                Toast.makeText(getContext(), "There is no Internet, Please open wifi od mobile data",
-                        Toast.LENGTH_SHORT).show();
+            } else {
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(getContext(), "There is no Internet, Please open wifi or mobile data", Toast.LENGTH_LONG).show();
+                    }
+                });
             }
-            return GetDataFromJson(jsonSt);
+            return jsonSt == null ? null : GetDataFromJson(jsonSt);
 
         }
 
@@ -196,7 +201,7 @@ public class MovieFragment extends Fragment {
                 }
                 movieAdapter.notifyDataSetChanged();
             } else {
-
+                Toast.makeText(getContext(), "There is no Internet, Please open wifi or mobile data", Toast.LENGTH_LONG).show();
             }
         }
     }

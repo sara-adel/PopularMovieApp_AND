@@ -9,12 +9,16 @@
     <dimen name="grid_item_image_height">200dp</dimen>
 
     <!--detail fragment-->
-    <dimen name="padding_linear">16dp</dimen>
+    <dimen name="title_height">120dp</dimen>
+    <dimen name="title_padding">25dp</dimen>
     <dimen name="title_margin_bottom">10dp</dimen>
+    <dimen name="padding_left_info">30dp</dimen>
+    <dimen name="padding_linear">16dp</dimen>
     <dimen name="image_width">150dp</dimen>
     <dimen name="image_height">200dp</dimen>
-    <dimen name="text_margin_left">5dp</dimen>
-    <dimen name="text_margin_top">15dp</dimen>
-
-
+    <dimen name="checkbox_margin_top">20dp</dimen>
+    <dimen name="text_margin">5dp</dimen>
+    <dimen name="view_height">2dp</dimen>
+    <dimen name="view_margin">10dp</dimen>
+    <dimen name="list_margin_top">10dp</dimen>
 </resources>

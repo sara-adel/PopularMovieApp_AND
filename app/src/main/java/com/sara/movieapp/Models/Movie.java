@@ -6,9 +6,9 @@ import java.io.Serializable;
  * Created by sara on 2/17/2018.
  */
 
-public class Movie implements Serializable{
+public class Movie implements Serializable {
 
-    private String title , overview , rate , date , image , id ;
+    private String title, overview, rate, date, image, id;
 
     public Movie() {
     }

@@ -2,6 +2,7 @@
     <string name="app_name">MovieApp</string>
 
     <string name="overview">Overview</string>
-
+    <string name="trailer">Trailers:</string>
+    <string name="review">Reviews:</string>
 
 </resources>
