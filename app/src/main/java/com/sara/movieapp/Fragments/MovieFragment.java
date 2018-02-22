@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
+import com.sara.movieapp.Database.MovieDBController;
 import com.sara.movieapp.Models.Movie;
 import com.sara.movieapp.R;
 import com.sara.movieapp.CheckConnection;
@@ -64,6 +65,19 @@ public class MovieFragment extends Fragment {
         if (id == R.id.top_rated) {
             FetchMovie movie = new FetchMovie();
             movie.execute("top_rated");
+        }
+        if (id == R.id.favourite) {
+            MovieDBController movie_db = new MovieDBController(getActivity());
+            ArrayList<Movie> fav = movie_db.getAllMovies();
+            if (fav != null) {
+                movieAdapter.clear();
+                for (Movie movieFav : fav) {
+                    movieAdapter.add(movieFav);
+                }
+                movieAdapter.notifyDataSetChanged();
+            } else {
+
+            }
         }
         return super.onOptionsItemSelected(item);
     }

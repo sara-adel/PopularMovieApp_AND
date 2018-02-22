@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/trailer_item"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/trailer_image_height"
+        android:scaleType="fitXY"
+        android:layout_margin="@dimen/trailer_margin" />
+
+    <TextView
+        android:id="@+id/trailer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:layout_margin="@dimen/trailer_margin"
+        android:textColor="@color/textColor2" />
+
+</LinearLayout>

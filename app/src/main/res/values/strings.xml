@@ -4,5 +4,6 @@
     <string name="overview">Overview</string>
     <string name="trailer">Trailers:</string>
     <string name="review">Reviews:</string>
+    <string name="review_item">:-</string>
 
 </resources>
